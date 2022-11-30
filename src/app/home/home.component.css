@@ -1,0 +1,48 @@
+.banner{
+    background-image: url(../../assets/bannerimg.jpg);
+    height: 600px;
+    background-position: center top;
+    background-size: cover;
+}
+.content{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+.content h1{
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+}
+.content a{
+    text-decoration: none;
+    background-color: #fff;
+    color: var(--primary-color);
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+.content a:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.stepbox{
+    background-color: black;
+    padding: 10px 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+.stepbox h1{
+    color: var(--primary-color);
+    font-size: 50px;
+    font-weight: bold;
+}
+.stepbox p{
+    color: #fff;
+    font-size: 20px;
+    font-style: italic;
+}
+.highlight{
+    color: orange;
+    font-weight: bold;
+    font-style: italic;
+}
