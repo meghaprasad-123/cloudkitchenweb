@@ -8,13 +8,22 @@
             <p>{{menuData[0].foodPrice | currency :'INR'}}</p>
         </div>
 
-        <div class="col-lg-6 col-lg-12">
-            <h1>Enter Your Details</h1>
-             <form action="">
-                <input type="text" class="form-control" placeholder="Enter your full name"><br>
-                <input type="text" class="form-control" placeholder="Enter your mobile number"><br>
-                <textarea class="form-control" placeholder="Enter your address" ></textarea>
-                <button class="btn btn-md btn-dark mt-3">Place Order</button>
+        <div class="col-lg-6 ">
+            <h1 style="margin-top: 15px;">Enter Your Details</h1>
+             <form [formGroup]="registerForm" action="">
+                <input formControlName="uname" type="text" class="form-control" placeholder="Enter your full name"><br>
+                <div class="text-danger" *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('uname')?.touched">&nbsp;Error occured</div>
+
+
+                <input formControlName="mob" type="text" class="form-control" placeholder="Enter your mobile number"><br>
+                <div class="text-danger" *ngIf="this.registerForm.get('mob')?.errors && this.registerForm.get('mob')?.touched">&nbsp;Invalid number</div>
+
+
+                <textarea formControlName="add" class="form-control" placeholder="Enter your address" ></textarea>
+                <div class="text-danger" *ngIf="this.registerForm.get('add')?.errors && this.registerForm.get('add')?.touched">&nbsp;Error occured</div>
+
+
+                <button (click)="register()" class="btn btn-md btn-dark mt-3">Place Order</button>
              </form>
         </div>
     </div>

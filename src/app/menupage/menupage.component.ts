@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { OrderDetailsService } from '../sevices/order-details.service';
 
@@ -11,7 +12,15 @@ import { OrderDetailsService } from '../sevices/order-details.service';
 })
 export class MenupageComponent implements OnInit {
 
-  constructor(private param:ActivatedRoute,private service:OrderDetailsService) { }
+  uname:any
+  mob:any
+  add:any
+
+  constructor(private param:ActivatedRoute,private service:OrderDetailsService,private formbuilder:FormBuilder) { }
+
+  // validation
+  registerForm=this.formbuilder.group({uname:['',[Validators.required,Validators.pattern('[a-zA-Z]+')]],
+  mob:['',[Validators.required,Validators.pattern('[0-9]+')]],add:['',[Validators.required,Validators.pattern('[a-zA-z0-9]+')]]})
 
   getMenuId:any
   menuData:any
@@ -24,6 +33,19 @@ export class MenupageComponent implements OnInit {
           return value.id==this.getMenuId
         }
         )
+    }
+  }
+
+  register(){
+    var uname=this.registerForm.value.uname
+    var mob=this.registerForm.value.mob
+    var add=this.registerForm.value.add
+
+    if(this.registerForm.valid){
+      alert('Your order has confirmed')
+    }
+    else{
+      alert("Please check there was some error occured")
     }
   }
 
