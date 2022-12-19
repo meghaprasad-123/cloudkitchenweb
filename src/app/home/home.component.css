@@ -1,12 +1,12 @@
 .banner{
-    background-image: url(../../assets/bannerimg.jpg);
-    height: 600px;
-    background-position: center top;
+    background-image: url(./../../assets/pablo-merchan-montes-wYOPqmtDD0w-unsplash.jpg);
+    height: 680px;
+    background-position: center bottom;
     background-size: cover;
 }
 .content{
     position: absolute;
-    top: 30%;
+    top: 55%;
     left: 15%;
 }
 .content h1{

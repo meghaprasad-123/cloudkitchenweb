@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+.navbar{
+   background: rgb(246, 209, 140);
+}
 .navbar-nav .nav-link.active-link
 {
    color: var(--primary-color);
@@ -6,4 +11,8 @@
 .navbar-nav .nav-link
 {
    color: var(--secondary-color);
+}
+#topic{
+   font-family: 'Berkshire Swash', cursive;
+   font-size: 30px;
 }
